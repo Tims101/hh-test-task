@@ -1,0 +1,91 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+
+<link rel="stylesheet" type="text/css" href="site.css">
+<script src="scripts/utils.js"></script>
+<script src="scripts/taskstorage.js"></script>
+<script src="scripts/component.month.js"></script>
+<script src="scripts/component.addingfasttask.js"></script>
+<script src="scripts/component.popover.js"></script>
+<script src="scripts/calendar.gui.js"></script>
+<script src="scripts/calendar.js"></script>
+<script>
+	window.onload = function(){
+		var c = new Calendar({
+			container: document.getElementById('calendar').getElementsByTagName('tbody')[0],
+			monthComponent: {
+				container: document.getElementById('month-component')
+			},
+			fastTaskAddingPopover: {
+				container: document.getElementById('task-add-fast')
+			},
+			mainPopover: {
+				container: document.getElementById('add-update-task-popover')
+			}
+		});
+
+		c.initCalendar();	
+	};
+</script>
+
+</head>
+
+<body>
+
+<div class="header">
+	<div class="buttons" id="task-add-fast">
+		<button class="btn-blue-big" id="add-task">Добавить</button>
+		<button class="btn-blue-big" id="update-task">Обновить</button>
+
+		<div class="task-add-fast-popover hide">	
+			<span class="close">&times;</span>
+			<span class="triangle-up"></span>
+			<input id="data" type="text" placeholder="5 сентября, 14:00, Встреча с инвесторами" />
+			<button id="create-task" class="btn-white-small">Создать</button>
+		</div>
+	</div>
+	<div class="search">	
+		<i class="search-icon"></i>
+		<input id="search" type="text" placeholder="Событие, дата или участник" />
+	</div>
+</div>
+
+<div id="add-update-task-popover" class="main-popover hide">
+		<span class="close">&times;</span>
+		<span class="triangle"></span>
+
+		<div id="create-fields" class="field">		
+			<input type="text" id="create-task" placeholder="Событие" />
+			<input type="text" id="create-date" placeholder="День.Месяц.Год" disabled="disabled" />
+			<input type="text" id="create-participants" placeholder="Имена участников" />	
+			
+			<textarea id="create-description" placeholder="Описание"></textarea>		
+			
+			<div class="buttons">
+				<button id="create" class="btn-white-small">Создать</button>		
+				<button id="delete" class="btn-white-small hide">Удалить</button>
+			</div>					
+		</div>
+</div>
+
+
+<div class="content">
+	<div id="month-component" class="month-component">		
+		<button id="previous-month" class="btn-white has-arrow"> < </button>
+		<p id="current-month">Март 2013</p>
+		<button id="next-month" class="btn-white has-arrow"> > </button>
+		<button id="today" class="btn-white">Сегодня</button>
+	</div>
+
+	<table id="calendar">
+		<tbody>
+
+		</tbody>
+	</table>
+</div>
+
+</body>
+</html>

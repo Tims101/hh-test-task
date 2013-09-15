@@ -1,0 +1,1 @@
+Задание доступно по ссылке https://github.com/glibin/hh-school-frontend/
