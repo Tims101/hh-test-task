@@ -1,4 +1,4 @@
-var MainPopover = function(options){
+﻿var MainPopover = function(options){
 	var self = this;
 
 	self.element;
@@ -124,7 +124,7 @@ var MainPopover = function(options){
 				addClass(createPanelFields.deleteBtn, "hide");
 			}
 
-			createPanelFields.date.value = get(calendarData.day) + '.' + get(calendarData.month) + '.' + get(calendarData.year);
+			createPanelFields.date.value = get(calendarData.day) + '.' + get(calendarData.month + 1) + '.' + get(calendarData.year);
 
 			createPanelFields.task.value = calendarData.data ? calendarData.data.task : '';
 			createPanelFields.participants.value = calendarData.data ? calendarData.data.participants : '';
