@@ -115,7 +115,12 @@ var CalendarGui = function(options, model){
 	};
 
 	var setElementDay = function(element, text){
-		element.day.innerText = text;
+		console.log(element);
+		if (element.day.innerText != null) {			
+			element.day.innerText = text;
+		} else if (element.day.textContent != null){
+			element.day.textContent = text;
+		}
 	};
 
 	var setElementTask = function(element, task, participants){		
@@ -125,8 +130,17 @@ var CalendarGui = function(options, model){
 			addClass(element.cell, "has-task");
 		}
 
-		element.task.innerText = task ? task : '';
-		element.participants.innerText = participants ? participants : '';
+		if (element.task.innerText != null) {			
+			element.task.innerText = task ? task : '';
+		} else if (element.task.textContent != null){
+			element.task.textContent = task ? task : '';
+		}
+
+		if (element.participants.innerText != null) {			
+			element.participants.innerText = participants ? participants : '';
+		} else if (element.participants.textContent != null){
+			element.participants.textContent = participants ? participants : '';
+		}		
 	};	
 
 	options.mainPopover.createCallback = function(task, participants, day, month, year, description){

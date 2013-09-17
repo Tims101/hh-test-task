@@ -104,6 +104,7 @@ table tr td.has-task {
 	height: 100px;
 	padding: 50px 60px 0 60px;
 	box-sizing: border-box;
+	-moz-box-sizing: border-box;
 	width: 100%;	
 }
 
@@ -190,6 +191,7 @@ input[type="text"] {
 	height: 25px;	
 	padding: 3px 5px;	
 	box-sizing: border-box;		
+	-moz-box-sizing: border-box;		
 }
 
 input[disabled] {
@@ -228,6 +230,7 @@ input[disabled] {
 .content {
 	height: 100%;
 	box-sizing: border-box;
+	-moz-box-sizing: border-box;
 	padding: 15px 50px 180px 50px;
 }
 
@@ -239,6 +242,7 @@ input[disabled] {
 	width: 300px;
 	box-shadow: 0 5px 20px rgba(0,0,0,.4);
 	box-sizing: border-box;
+	-moz-box-sizing: border-box;
 	background: #fff;
 }
 
@@ -269,6 +273,7 @@ input[disabled] {
 	height: 330px;	
 	box-shadow: 0 5px 20px rgba(0,0,0,.4);
 	box-sizing: border-box;
+	-moz-box-sizing: border-box;
 	background: #fff;
 	position: absolute;
 	z-index: 3;
@@ -317,6 +322,7 @@ input[disabled] {
 	margin-bottom: 15px;
 	padding: 3px 5px;	
 	box-sizing: border-box;	
+	-moz-box-sizing: border-box;	
 }
 
 .triangle-up {
